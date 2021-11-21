@@ -14,6 +14,7 @@ module.exports = {
         "crypto-lightorange": "#FFEDDC",
         "crypto-lightpurple": "#DBDEFF",
         "crypto-lightcyan": "#DBF8FF",
+        "crypto-gray-bg": "#ECF2F6",
       },
       zIndex: {
         "-10": "-10",
