@@ -28,7 +28,7 @@ export default function Header() {
             <button
               type="button"
               className="bg-crypto-pink text-crypto-purple rounded-2xl
-              px-7 py-3 z-10"
+              px-7 py-4 z-10"
             >
               Connect Wallet
             </button>
@@ -39,7 +39,7 @@ export default function Header() {
         </nav>
         <div
           className="hidden md:block overflow-hidden bg-crypto-yellow
-      rounded-full absolute h-80 w-80 -top-40 -left-40"
+      rounded-full absolute h-96 w-96 -top-44 -left-40"
         ></div>
       </header>
     </div>
