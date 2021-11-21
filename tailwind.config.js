@@ -19,9 +19,15 @@ module.exports = {
       zIndex: {
         "-10": "-10",
       },
+      height: {
+        overview: "34rem",
+      },
       lineHeight: {
         "extra-loose": "2.5",
         12: "4rem",
+      },
+      backgroundImage: {
+        "overview-pattern": "url('/src/assets/images/overview-bg.png')",
       },
     },
     fontFamily: {

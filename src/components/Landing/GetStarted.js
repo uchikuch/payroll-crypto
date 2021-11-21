@@ -41,7 +41,7 @@ export default function GetStarted() {
           />
           <button
             type="button"
-            className="btn btn-purple hover:bg-white hover:text-black"
+            className="btn btn-purple hover:bg-crypto-pink hover:text-crypto-blue-text"
           >
             Get Started
           </button>
