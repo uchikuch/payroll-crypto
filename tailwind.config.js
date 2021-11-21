@@ -9,6 +9,11 @@ module.exports = {
         "crypto-pink": "#FAB8C4",
         "crypto-lightblue": "#70C8E1",
         "crypto-green": "#66BF8B",
+        "crypto-black": "#27272E",
+        "crypto-blue-text": "#2522BA",
+        "crypto-lightorange": "#FFEDDC",
+        "crypto-lightpurple": "#DBDEFF",
+        "crypto-lightcyan": "#DBF8FF",
       },
       zIndex: {
         "-10": "-10",

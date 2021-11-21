@@ -1,7 +1,7 @@
 import React from "react";
-import hero_img from "../assets/images/hero-cryp-img.png";
-import send_message from "../assets/images/send-message.svg";
-import scroll_icon from "../assets/images/scroll-icon.svg";
+import hero_img from "../../assets/images/hero-cryp-img.png";
+import send_message from "../../assets/images/send-message.svg";
+import scroll_icon from "../../assets/images/scroll-icon.svg";
 import Header from "./Header";
 
 export default function Hero() {
@@ -12,13 +12,13 @@ export default function Hero() {
       </div>
 
       <div
-        className="container flex flex-col-reverse lg:flex-row items-center
-      gap-0 mt-14 lg:mt-16"
+        className="container flex flex-col lg:flex-row items-center
+      gap-0 mt-12 lg:mt-12 mb-8"
       >
         {/* content */}
         <div className="flex flex-1 flex-col items-center lg:items-start">
           <h2
-            className="text-3xl md:text-4 lg:font-bold lg:text-5xl lg:leading-12
+            className="font-bold text-5xl lg:leading-12
             text-center lg:text-left mb-b z-10"
           >
             {" "}
@@ -52,7 +52,7 @@ export default function Hero() {
             </div>
           </div>
           {/* Scroll to expolore */}
-          <div className="flex justify-items-center gap-4 mt-12">
+          <div className="flex justify-items-center gap-4 mt-12 mb-12">
             <img className="w-6" src={scroll_icon} alt="" />
             <div className="text-gray-400 flex flex-col justify-items-center justify-center content-center">
               <p>Scroll to explore</p>
@@ -78,7 +78,7 @@ export default function Hero() {
       ></div>
       <div
         className="hidden md:block overflow-hidden bg-crypto-pink
-      rounded-full absolute h-10 w-10 top-1/2 left-32"
+      rounded-full absolute h-7 w-7 top-1/2 left-16"
       ></div>
     </section>
   );

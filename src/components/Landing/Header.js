@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/images/logo-crypt.svg";
+import logo from "../../assets/images/logo-crypt.svg";
 import { FaBars } from "react-icons/fa";
 
 export default function Header() {
@@ -15,7 +15,7 @@ export default function Header() {
             ></img>
           </div>
           <ul
-            className="hidden sm:flex flex-1 justify-center items-center 
+            className="hidden md:flex flex-1 justify-center items-center 
           gap-12 text-gray text-s z-10"
           >
             <li className="cursor-pointer">Home</li>
@@ -24,16 +24,16 @@ export default function Header() {
             <li className="cursor-pointer">Farms (beta)</li>
             <li className="cursor-pointer">Pools</li>
           </ul>
-          <div className="hidden sm:flex justify-end">
+          <div className="hidden md:flex justify-end">
             <button
               type="button"
-              className="bg-crypto-pink text-crypto-purple rounded-2xl
+              className="bg-crypto-pink text-crypto-blue-text rounded-2xl
               px-7 py-4 z-10"
             >
               Connect Wallet
             </button>
           </div>
-          <div className="flex sm:hidden flex-1 justify-end">
+          <div className="flex md:hidden flex-1 justify-end">
             <FaBars className="text-2xl" />
           </div>
         </nav>
