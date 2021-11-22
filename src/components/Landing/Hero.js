@@ -4,7 +4,11 @@ import send_message from "../../assets/images/send-message.svg";
 import scroll_icon from "../../assets/images/scroll-icon.svg";
 import Header from "./Header";
 
+import { useNavigate } from "react-router-dom";
+
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative overflow-hidden">
       <div className="z-20">
@@ -40,7 +44,8 @@ export default function Hero() {
           <div className="flex justify-center flex-wrap gap-6">
             <button
               type="button"
-              className="btn btn-purple hover:bg-white hover:text-black"
+              className="btn btn-purple hover:bg-crypto-pink hover:text-black"
+              onClick={() => navigate("/login")}
             >
               Log In
             </button>

@@ -28,6 +28,7 @@ module.exports = {
       },
       backgroundImage: {
         "overview-pattern": "url('/src/assets/images/overview-bg.png')",
+        login: "url('/src/assets/images/login.png')",
       },
     },
     fontFamily: {
