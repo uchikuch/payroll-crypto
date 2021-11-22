@@ -42,6 +42,15 @@ module.exports = {
         "2xl": "1124px",
       },
     },
+    containerL: {
+      center: true,
+      padding: "1rem",
+      screens: {
+        lg: "1224px",
+        xl: "1424px",
+        "2xl": "1124px",
+      },
+    },
   },
   variants: {
     extend: {},

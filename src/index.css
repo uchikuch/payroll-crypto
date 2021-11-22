@@ -12,6 +12,10 @@
   @apply bg-crypto-purple text-white;
 }
 
+.btn-pink {
+  @apply bg-crypto-pink text-black;
+}
+
 .btn-white {
   @apply bg-crypto-pink;
 }

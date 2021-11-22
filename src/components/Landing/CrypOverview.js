@@ -8,9 +8,9 @@ import purple_circle from "../../assets/images/purple-circle.png";
 
 export default function CrypOverview() {
   return (
-    <section className="relative py-16 px-8 cursor-pointer">
+    <section className="relative py-16 px-8">
       <div className="relative container rounded-3xl pl-14 bg-overview-pattern h-overview min-w-[300px]">
-        <div className="flex">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-10">
           {/* Card */}
           <div className="flex flex-col bg-white w-80 px-6 py-6 rounded-b-2xl z-10">
             <p className="text-3xl">Cryp Overview</p>
@@ -48,13 +48,19 @@ export default function CrypOverview() {
               </div>
             </div>
           </div>
+          <div className="md:flex hidden flex-col justify-center mt-48">
+            Lorem ipsum dolor sit amet consectetur
+            <br /> adipiscing elit sed do eiusmod tempor.
+            <br /> Lorem ipsum dolor sit amet consectetur <br />
+            adipiscing elit sed do.
+          </div>
           {/* Free Text */}
         </div>
       </div>
       {/* Absolute */}
       <div
         className="hidden md:block overflow-hidden
-      rounded-full absolute h-screen top-0 left-2/3"
+        rounded-full absolute h-screen top-0 left-2/3"
       >
         <img src={tube_cylinder} alt="" />
       </div>
