@@ -5,6 +5,8 @@ import Login from "src/components/Authentication/Login";
 import Overview from "src/components/Dashboard/Overview";
 import Auth from "src/components/Authentication/Auth";
 import { AuthGuard } from "src/components/Authentication/AuthGuard";
+import DashboardLayout from "src/layouts/DashboardLayout";
+import Balance from "./components/Dashboard/Balance";
 
 function App() {
   return (
@@ -19,7 +21,20 @@ function App() {
               path="/dashboard"
               element={
                 <AuthGuard>
-                  <Overview />
+                  <DashboardLayout>
+                    <Overview />
+                  </DashboardLayout>
+                </AuthGuard>
+              }
+            />
+            <Route
+              exact
+              path="/dashboard/balance"
+              element={
+                <AuthGuard>
+                  <DashboardLayout>
+                    <Balance />
+                  </DashboardLayout>
                 </AuthGuard>
               }
             />

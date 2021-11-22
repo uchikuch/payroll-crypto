@@ -10,6 +10,7 @@ module.exports = {
         "crypto-lightblue": "#70C8E1",
         "crypto-green": "#66BF8B",
         "crypto-black": "#27272E",
+        "crypto-orange": "#FF754C",
         "crypto-blue-text": "#2522BA",
         "crypto-lightorange": "#FFEDDC",
         "crypto-lightpurple": "#DBDEFF",
