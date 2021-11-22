@@ -1,10 +1,10 @@
 import React from "react";
-import overview_supply from "../../assets/images/overview-supply.png";
-import overview_burned from "../../assets/images/overview-burned.png";
-import overview_current from "../../assets/images/overview-current.png";
-import overview_market from "../../assets/images/overview-market.png";
-import tube_cylinder from "../../assets/images/tube-cylinder.png";
-import purple_circle from "../../assets/images/purple-circle.png";
+import overview_supply from "src/assets/images/overview-supply.png";
+import overview_burned from "src/assets/images/overview-burned.png";
+import overview_current from "src/assets/images/overview-current.png";
+import overview_market from "src/assets/images/overview-market.png";
+import tube_cylinder from "src/assets/images/tube-cylinder.png";
+import purple_circle from "src/assets/images/purple-circle.png";
 
 export default function CrypOverview() {
   return (

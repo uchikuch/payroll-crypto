@@ -1,5 +1,5 @@
-import logo from "../../assets/images/logo-crypt.svg";
-import scroll_icon from "../../assets/images/scroll-icon.svg";
+import logo from "src/assets/images/logo-crypt.svg";
+import scroll_icon from "src/assets/images/scroll-icon.svg";
 
 function Footer() {
   const scrollToTop = () => {

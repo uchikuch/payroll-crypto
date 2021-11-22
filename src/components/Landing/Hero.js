@@ -1,7 +1,7 @@
 import React from "react";
-import hero_img from "../../assets/images/hero-cryp-img.png";
-import send_message from "../../assets/images/send-message.svg";
-import scroll_icon from "../../assets/images/scroll-icon.svg";
+import hero_img from "src/assets/images/hero-cryp-img.png";
+import send_message from "src/assets/images/send-message.svg";
+import scroll_icon from "src/assets/images/scroll-icon.svg";
 import Header from "./Header";
 
 import { useNavigate } from "react-router-dom";

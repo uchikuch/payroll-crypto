@@ -1,7 +1,7 @@
 import React from "react";
-import get_started from "../../assets/images/get-started.png";
-import right_arm from "../../assets/images/right-arm.png";
-import mail from "../../assets/images/mail.svg";
+import get_started from "src/assets/images/get-started.png";
+import right_arm from "src/assets/images/right-arm.png";
+import mail from "src/assets/images/mail.svg";
 
 export default function GetStarted() {
   return (

@@ -1,9 +1,8 @@
 import React from "react";
-import feature_user from "../../assets/images/feature-user.png";
-import feature_savings from "../../assets/images/feature-savings.png";
-import feature_stacked from "../../assets/images/feature-stacked.png";
-//import globe from "../../assets/images/globe.png";
-import pinch_globe from "../../assets/images/pinch-globe.png";
+import feature_user from "src/assets/images/feature-user.png";
+import feature_savings from "src/assets/images/feature-savings.png";
+import feature_stacked from "src/assets/images/feature-stacked.png";
+import pinch_globe from "src/assets/images/pinch-globe.png";
 
 export default function FeatureAchievements() {
   return (

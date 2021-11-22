@@ -1,6 +1,6 @@
 import React from "react";
-import laptop from "../../assets/images/laptop.png";
-import tri_circles from "../../assets/images/tri-circles.png";
+import laptop from "src/assets/images/laptop.png";
+import tri_circles from "src/assets/images/tri-circles.png";
 
 export default function Workflow() {
   return (

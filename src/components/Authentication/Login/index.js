@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/images/logo-crypt.svg";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import { useStateValue } from "src/StateProvider";
+import { useNavigate } from "react-router-dom";
+
+import logo from "src/assets/images/logo-crypt.svg";
 
 export default function Login() {
+  const navigate = useNavigate();
+  const [{}, dispatch] = useStateValue();
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const loginEmail = window.localStorage.getItem("loginEmail")
+    ? window.localStorage.getItem("loginEmail")
+    : "";
+
   return (
     <div className="mt-12 md:mt-32">
       <div className="flex justify-center content-center max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
@@ -66,48 +79,115 @@ export default function Login() {
             <span className="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
           </div>
 
-          <div className="mt-4">
-            <label
-              className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-              for="LoggingEmailAddress"
-            >
-              Email Address
-            </label>
-            <input
-              id="LoggingEmailAddress"
-              className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-              type="email"
-            />
-          </div>
+          <Formik
+            initialValues={{
+              email: loginEmail,
+              password: "",
+            }}
+            validationSchema={Yup.object().shape({
+              email: Yup.string()
+                .email("Must be a valid email")
+                .max(255)
+                .required("Email is required"),
+              password: Yup.string().max(255).required("Password is required"),
+            })}
+            onSubmit={async (values) => {
+              console.log("values:", values);
+              console.log("url:", process.env.REACT_APP_SERVER_URL);
+              try {
+                setEmailError("");
+                setPasswordError("");
+                const res = await fetch(
+                  `${process.env.REACT_APP_SERVER_URL}/login`,
+                  {
+                    method: "POST",
+                    body: JSON.stringify(values),
+                    headers: { "Content-Type": "application/json" },
+                  }
+                );
+                const data = await res.json();
+                console.log(data);
+                if (data.errors) {
+                  if (data.errors.email) {
+                    setEmailError(data.errors.email);
+                  }
+                  if (data.errors.password) {
+                    setPasswordError(data.errors.password);
+                  }
+                  console.log(data.errors);
+                }
+                if (data.user) {
+                  localStorage.setItem("topset_jwt", data.jwt);
+                  dispatch({
+                    type: "SET_USER",
+                    user: data.user,
+                  });
+                  navigate("/dashboard");
+                  //window.location.reload();
+                }
+              } catch (error) {
+                console.log("caught error: ", error);
+              }
+            }}
+          >
+            {({
+              errors,
+              handleBlur,
+              handleChange,
+              handleSubmit,
+              isSubmitting,
+              touched,
+              values,
+            }) => (
+              <form noValidate onSubmit={handleSubmit}>
+                <div className="mt-4">
+                  <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                    Email Address
+                  </label>
+                  <input
+                    className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    type="email"
+                    name="email"
+                    value={values.email}
+                  />
+                </div>
 
-          <div className="mt-4">
-            <div className="flex justify-between">
-              <label
-                className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-                for="loggingPassword"
-              >
-                Password
-              </label>
-              <Link
-                to="#"
-                className="text-xs text-gray-500 dark:text-gray-300 hover:underline"
-              >
-                Forget Password?
-              </Link>
-            </div>
+                <div className="mt-4">
+                  <div className="flex justify-between">
+                    <label className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                      Password
+                    </label>
+                    <Link
+                      to="#"
+                      className="text-xs text-gray-500 dark:text-gray-300 hover:underline"
+                    >
+                      Forget Password?
+                    </Link>
+                  </div>
 
-            <input
-              id="loggingPassword"
-              className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-              type="password"
-            />
-          </div>
+                  <input
+                    className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    type="password"
+                    name="password"
+                    value={values.password}
+                  />
+                </div>
 
-          <div className="mt-8">
-            <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-crypto-purple rounded hover:bg-crypto-pink hover:text-black focus:outline-none focus:bg-gray-600">
-              Login
-            </button>
-          </div>
+                <div className="mt-8">
+                  <button
+                    type="submit"
+                    className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-crypto-purple rounded hover:bg-crypto-pink hover:text-black focus:outline-none focus:bg-crypto-pink"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+            )}
+          </Formik>
 
           <div className="flex items-center justify-between mt-4">
             <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>

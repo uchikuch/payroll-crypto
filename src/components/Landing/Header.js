@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/logo-crypt.svg";
+import logo from "src/assets/images/logo-crypt.svg";
 import { FaBars } from "react-icons/fa";
 
 export default function Header() {
