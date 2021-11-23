@@ -4,6 +4,7 @@ import FavoriteCoins from "./FavoriteCoins";
 import Earnings from "./Earnings";
 import { BiSearch } from "react-icons/bi";
 import Notification from "./Notification";
+import CrypCoins from "./CrypCoins";
 
 export default function Overview() {
   return (
@@ -28,6 +29,9 @@ export default function Overview() {
         </div>
         <div className="mt-36">
           <Earnings />
+        </div>
+        <div className="mt-24">
+          <CrypCoins />
         </div>
       </div>
     </section>
