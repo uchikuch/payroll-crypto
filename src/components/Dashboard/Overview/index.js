@@ -11,7 +11,9 @@ export default function Overview() {
     <section className="container flex flex-col lg:flex-row flex-1">
       <div className="lg:border-r-2 lg:w-2/3">
         <h3 className="font-semibold text-xl sm:text-2xl">Hi Nicole,</h3>
-        <h2 className="font-bold text-3xl sm:text-6xl mt-4">Welcome back 👋</h2>
+        <h2 className="font-bold text-3xl sm:text-4xl lg:text-6xl mt-4">
+          Welcome back 👋
+        </h2>
         <div className="mt-12 sm:pr-8">
           <YourAssets />
         </div>

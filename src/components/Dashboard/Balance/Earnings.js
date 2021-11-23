@@ -15,9 +15,9 @@ export default function Earnings() {
       </p>
       <div
         type="button"
-        className="flex justify-center cursor-pointer gap-2 btn text-crypto-purple hover:bg-crypto-purple hover:text-white mt-4"
+        className="flex text-sm md:text-lg justify-center cursor-pointer gap-2 btn text-crypto-purple hover:bg-crypto-purple hover:text-white mt-4"
       >
-        Withdraw All Earning{" "}
+        Withdraw All Earning
       </div>
     </div>
   );

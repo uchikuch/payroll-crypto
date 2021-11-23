@@ -10,12 +10,14 @@ export default function Balance() {
   return (
     <section className="container flex flex-1 flex-col">
       <div>
-        <h3 className="font-semibold text-2xl">
+        <h3 className="font-semibold text-xl sm:text-2xl">
           Lorem ipsum dolor sit amet, consectetur,
         </h3>
-        <h2 className="font-bold text-6xl mt-4">Balance</h2>
+        <h2 className="font-bold text-3xl sm:text-4xl lg:text-6xl mt-4">
+          Balance
+        </h2>
       </div>
-      <div className="flex flex-1 mt-8 gap-8">
+      <div className="grid justify-items-stretch lg:grid-flow-col  mt-8 gap-8">
         <BalanceCard
           img={current_balance}
           title="Current Balance"
@@ -35,11 +37,11 @@ export default function Balance() {
           period="Since Last Year"
         />
       </div>
-      <div className="flex flex-1 gap-12 mt-12">
-        <div className="w-2/3">
+      <div className="flex flex-col lg:flex-row flex-1 gap-12 mt-12">
+        <div className="lg:w-2/3">
           <YourAssets className="flex-grow" />
         </div>
-        <div className="w-1/3">
+        <div className="lg:w-1/3">
           <Earnings />
         </div>
       </div>
