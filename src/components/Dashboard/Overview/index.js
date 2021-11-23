@@ -1,5 +1,5 @@
 import React from "react";
-import YourAssets from "./YourAssets/main";
+import YourAssets from "../Balance/YourAssets";
 import FavoriteCoins from "./FavoriteCoins";
 import Earnings from "./Earnings";
 import { BiSearch } from "react-icons/bi";
@@ -8,7 +8,7 @@ import CrypCoins from "./CrypCoins";
 
 export default function Overview() {
   return (
-    <section className="flex flex-1">
+    <section className="container flex flex-1">
       <div className="border-r-2 w-2/3">
         <h3 className="font-semibold text-2xl">Hi Nicole,</h3>
         <h2 className="font-bold text-6xl mt-4">Welcome back 👋</h2>
@@ -22,7 +22,12 @@ export default function Overview() {
       <div className="flex flex-1 flex-col px-12">
         <div className="flex gap-4 items-center">
           <BiSearch className="text-2xl" />
-          <p className="text-sm text-gray-400 font-semibold">Search</p>
+          <input
+            className="pl-5 bg-transparent outline-none flex-grow
+          text-gray-600 placeholder-gray-400"
+            type="text"
+            placeholder="Search"
+          />
           <div className="flex flex-1 justify-end">
             <Notification />
           </div>

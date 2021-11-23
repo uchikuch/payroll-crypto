@@ -15,8 +15,8 @@ export default function Bitcoin() {
           $9,258.90
         </div>
       </div>
-      <div className="flex flex-grow w-24 justify-end pr-2 pt-2">
-        <FaAngleRight className="text-2xl" />
+      <div className="flex flex-grow w-24 justify-end pr-2 pt-2 ">
+        <FaAngleRight className="text-2xl cursor-pointer" />
       </div>
     </div>
   );

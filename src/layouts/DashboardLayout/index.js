@@ -7,7 +7,7 @@ export default function DashboardLayout({ children }) {
       <div>
         <SideNav />
       </div>
-      <div className="md:ml-64 py-10 pl-10 pr-12 flex-grow">{children}</div>
+      <div className="lg:ml-64 py-10 pl-10 pr-12 flex-grow">{children}</div>
     </div>
   );
 }

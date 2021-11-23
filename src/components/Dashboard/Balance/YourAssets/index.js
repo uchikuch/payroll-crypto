@@ -29,7 +29,7 @@ export default function YourAssets() {
           <div className="text-xs text-gray-400 mt-2">BTC</div>
           <div
             type="button"
-            className="flex justify-center gap-2 btn btn-purple hover:bg-crypto-pink hover:text-black mt-4"
+            className="flex justify-center cursor-pointer gap-2 btn btn-purple hover:bg-crypto-pink hover:text-black mt-4"
           >
             <FiEye className="text-2xl" /> See all Coins
           </div>

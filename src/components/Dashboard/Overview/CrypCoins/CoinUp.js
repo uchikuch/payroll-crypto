@@ -23,7 +23,7 @@ export default function CoinUp() {
           <p className="text-xs text-gray-400">V Stable</p>
         </div>
         <LineChart height={40} width={100} />
-        <BsArrowRightShort className="text-md " />
+        <BsArrowRightShort className="text-md cursor-pointer" />
       </div>
     </section>
   );

@@ -16,7 +16,7 @@ export default function Bitcoin() {
         </div>
       </div>
       <div className="flex flex-grow w-24 justify-end pr-2 pt-2">
-        <FaAngleRight className="text-2xl" />
+        <FaAngleRight className="text-2xl cursor-pointer" />
       </div>
     </div>
   );

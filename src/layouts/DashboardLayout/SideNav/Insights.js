@@ -14,13 +14,13 @@ export default function Insights() {
         {/* Inbox */}
         <li>
           {" "}
-          <NavLink to="/indob">
+          <NavLink to="/dashboard/inbox">
             <div
               className={clsx(
                 "cursor-pointer flex gap-4 rounded-xl bg-white hover:bg-crypto-purple hover:text-white p-4 text-sm mb-2",
                 {
                   "cursor-pointer flex gap-4 rounded-xl bg-crypto-purple text-white p-4 text-sm mb-2":
-                    "/indob" === location.pathname,
+                    "/dashboard/inbox" === location.pathname,
                 }
               )}
             >
