@@ -17,7 +17,7 @@ export default function Login() {
     : "";
 
   return (
-    <div className="mt-12 md:mt-32">
+    <div className="mt-12 md:mt-28">
       <div className="flex justify-center content-center max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
         <div className="hidden bg-cover lg:block lg:w-1/2 bg-login"></div>
 

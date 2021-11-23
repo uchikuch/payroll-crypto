@@ -19,11 +19,13 @@ export default function CoinUp() {
       </div>
       {/* Lower Half */}
       <div className="flex mt-2 justify-between items-end">
-        <div className="flex flex-col items-between">
-          <p>76.82$</p>
-          <p className="text-xs text-gray-400">Token</p>
+        <div className="flex gap-4">
+          <div className="flex flex-col items-between">
+            <p>76.82$</p>
+            <p className="text-xs text-gray-400">Token</p>
+          </div>
+          <LineChart height={40} width={100} />
         </div>
-        <LineChart height={40} width={100} />
         <BsArrowRightShort className="text-md cursor-pointer" />
       </div>
     </section>
