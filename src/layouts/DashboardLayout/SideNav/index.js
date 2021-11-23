@@ -7,11 +7,12 @@ import Menu from "./Menu";
 import Profile from "./Profile";
 
 import PerfectScrollbar from "react-perfect-scrollbar";
+import "react-perfect-scrollbar/dist/css/styles.css";
 
 export default function NavBar() {
   return (
-    <PerfectScrollbar>
-      <div className="hidden border-r-2 justify-between fixed w-64 h-screen lg:flex flex-col py-10 px-6">
+    <div className="hidden border-r-2 justify-between fixed w-64 h-screen xl:flex flex-col py-10 px-6">
+      <PerfectScrollbar className="flex flex-col justify-between">
         <Link to="/">
           <img className="w-2/3 ml-2" src={logo} alt=""></img>
         </Link>
@@ -26,7 +27,7 @@ export default function NavBar() {
             <Profile />
           </Link>
         </div>
-      </div>
-    </PerfectScrollbar>
+      </PerfectScrollbar>
+    </div>
   );
 }

@@ -12,8 +12,8 @@ export default function index() {
       <h2 className="text-xl font-semibold py-6">Favorite Coins 🔥</h2>
 
       <div
-        className="flex space-x-7 overflow-scroll scrollbar-hide
-        p-3 -ml-3"
+        className="flex space-x-7 overflow-scroll 
+        p-3 -ml-3 scrollbar-hide scrollbar-hide"
       >
         <CoinCard
           img={bitcoin_sm}

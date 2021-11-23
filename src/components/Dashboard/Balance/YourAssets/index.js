@@ -9,7 +9,7 @@ export default function YourAssets() {
   return (
     <section className="rounded-xl px-6 py-6 shadow-xl">
       <h2>Your Assets</h2>
-      <div className="flex gap-2 mt-4 justify-between">
+      <div className="flex flex-col sm:flex-row gap-2 mt-4 justify-between">
         {/* Tokens */}
         <div className="flex flex-col">
           <div>
@@ -23,7 +23,7 @@ export default function YourAssets() {
           </div>
         </div>
         {/* Circular Progress */}
-        <div className="flex flex-col justify-center items-center pr-10">
+        <div className="flex flex-col justify-center mt-10 sm:mt-0 items-center sm:pr-10">
           <CircularProgress />
           <div className="font-semibold mt-2">Bitcoin</div>
           <div className="text-xs text-gray-400 mt-2">BTC</div>

@@ -92,8 +92,6 @@ export default function Login() {
               password: Yup.string().max(255).required("Password is required"),
             })}
             onSubmit={async (values) => {
-              console.log("values:", values);
-              console.log("url:", process.env.REACT_APP_SERVER_URL);
               try {
                 setEmailError("");
                 setPasswordError("");
@@ -106,7 +104,6 @@ export default function Login() {
                   }
                 );
                 const data = await res.json();
-                console.log(data);
                 if (data.errors) {
                   if (data.errors.email) {
                     setEmailError(data.errors.email);
@@ -114,7 +111,6 @@ export default function Login() {
                   if (data.errors.password) {
                     setPasswordError(data.errors.password);
                   }
-                  console.log(data.errors);
                 }
                 if (data.user) {
                   localStorage.setItem("topset_jwt", data.jwt);
@@ -152,6 +148,7 @@ export default function Login() {
                     name="email"
                     value={values.email}
                   />
+                  <p className="text-crypto-red text-sm">{emailError}</p>
                 </div>
 
                 <div className="mt-4">
@@ -175,6 +172,7 @@ export default function Login() {
                     name="password"
                     value={values.password}
                   />
+                  <p className="text-crypto-red text-sm">{passwordError}</p>
                 </div>
 
                 <div className="mt-8">

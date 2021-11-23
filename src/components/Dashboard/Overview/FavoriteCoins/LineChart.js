@@ -38,8 +38,8 @@ export default function LineChartComp({ height, width }) {
 function CustomTooltip({ active, payload, label }) {
   if (active) {
     return (
-      <div className="bg-black text-white shadow-md rounded-md p-4">
-        <p className="text-crypto-pink">${payload[0].value.toFixed(2)}</p>
+      <div className="bg-transparent text-white rounded-md p-4">
+        <p className="text-crypto-purple">${payload[0].value.toFixed(2)}</p>
         <p className="text-crypto-lightblue">${payload[1].value.toFixed(2)}</p>
       </div>
     );

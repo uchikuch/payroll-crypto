@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useStateValue } from "src/StateProvider";
 import PropTypes from "prop-types";
-//import SplashScreen from "../components/SplashScreen";
+import SplashScreen from "src/components/Animations/SplashScreen";
 import authService from "src/services/authService";
 
 function Auth({ children }) {
@@ -27,7 +27,7 @@ function Auth({ children }) {
   }, [dispatch]);
 
   if (isLoading) {
-    return "Loading...";
+    return <SplashScreen />;
   }
 
   return children;
