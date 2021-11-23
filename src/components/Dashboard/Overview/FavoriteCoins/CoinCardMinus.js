@@ -1,4 +1,5 @@
 import { RiArrowDownSLine } from "react-icons/ri";
+import AreaChart from "./AreaChart";
 
 function MediumCard({ img, title, total, period, difference }) {
   return (
@@ -14,6 +15,9 @@ function MediumCard({ img, title, total, period, difference }) {
           <RiArrowDownSLine className="text-2xl " />
         </div>
         <p>{difference}</p>
+      </div>
+      <div className="mt-2">
+        <AreaChart />
       </div>
     </section>
   );
