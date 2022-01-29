@@ -17,102 +17,84 @@ import Notifications from "./components/Dashboard/Notifications";
 function App() {
   return (
     <Router>
-      <Auth>
-        <div className="font-Poppins">
-          <Routes>
-            <Route exact path="/" element={<Landing />} />
-            <Route exact path="/login" element={<Login />} />
-            <Route
-              exact
-              path="/dashboard"
-              element={
-                <AuthGuard>
-                  <DashboardLayout>
-                    <Overview />
-                  </DashboardLayout>
-                </AuthGuard>
-              }
-            />
-            <Route
-              exact
-              path="/dashboard/balance"
-              element={
-                <AuthGuard>
-                  <DashboardLayout>
-                    <Balance />
-                  </DashboardLayout>
-                </AuthGuard>
-              }
-            />
-            <Route
-              exact
-              path="/dashboard/utility"
-              element={
-                <AuthGuard>
-                  <DashboardLayout>
-                    <Utility />
-                  </DashboardLayout>
-                </AuthGuard>
-              }
-            />
-            <Route
-              exact
-              path="/dashboard/payment"
-              element={
-                <AuthGuard>
-                  <DashboardLayout>
-                    <Payment />
-                  </DashboardLayout>
-                </AuthGuard>
-              }
-            />
-            <Route
-              exact
-              path="/dashboard/analytics"
-              element={
-                <AuthGuard>
-                  <DashboardLayout>
-                    <Analytics />
-                  </DashboardLayout>
-                </AuthGuard>
-              }
-            />
-            <Route
-              exact
-              path="/dashboard/settings"
-              element={
-                <AuthGuard>
-                  <DashboardLayout>
-                    <Settings />
-                  </DashboardLayout>
-                </AuthGuard>
-              }
-            />
-            <Route
-              exact
-              path="/dashboard/inbox"
-              element={
-                <AuthGuard>
-                  <DashboardLayout>
-                    <Inbox />
-                  </DashboardLayout>
-                </AuthGuard>
-              }
-            />
-            <Route
-              exact
-              path="/dashboard/notifications"
-              element={
-                <AuthGuard>
-                  <DashboardLayout>
-                    <Notifications />
-                  </DashboardLayout>
-                </AuthGuard>
-              }
-            />
-          </Routes>
-        </div>
-      </Auth>
+      <div className="font-Poppins">
+        <Routes>
+          <Route exact path="/" element={<Landing />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route
+            exact
+            path="/dashboard"
+            element={
+              <DashboardLayout>
+                <Overview />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            exact
+            path="/dashboard/balance"
+            element={
+              <DashboardLayout>
+                <Balance />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            exact
+            path="/dashboard/utility"
+            element={
+              <DashboardLayout>
+                <Utility />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            exact
+            path="/dashboard/payment"
+            element={
+              <DashboardLayout>
+                <Payment />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            exact
+            path="/dashboard/analytics"
+            element={
+              <DashboardLayout>
+                <Analytics />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            exact
+            path="/dashboard/settings"
+            element={
+              <DashboardLayout>
+                <Settings />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            exact
+            path="/dashboard/inbox"
+            element={
+              <DashboardLayout>
+                <Inbox />
+              </DashboardLayout>
+            }
+          />
+          <Route
+            exact
+            path="/dashboard/notifications"
+            element={
+              <DashboardLayout>
+                <Notifications />
+              </DashboardLayout>
+            }
+          />
+        </Routes>
+      </div>
     </Router>
   );
 }
